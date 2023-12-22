@@ -94,12 +94,12 @@ void MPU6050_Init(void)
 		MPU_Write(MPU6050_ADDR, SMPLRT_DIV, data);
 		
 		// set accelerometer configuration in ACCEL_CONFIG register
-		// XA_ST = 0, YA_ST = 0, ZA_ST = 0, FS_SEL = 0 -> ? 2g
+		// XA_ST = 0, YA_ST = 0, ZA_ST = 0, FS_SEL = 0 -> 2g
 		data = 0x00;
 		MPU_Write(MPU6050_ADDR, ACCEL_CONFIG, data);
 		
 		// set Gyroscopic configuration in GYRO_CONFIG register
-		// XG_ST = 0, YG_ST = 0, ZG_ST = 0, FS_SEL = 0 -> ? 250 ?/s
+		// XG_ST = 0, YG_ST = 0, ZG_ST = 0, FS_SEL = 0 -> 250 */s
 		data = 0x00;
 		MPU_Write(MPU6050_ADDR, GYRO_CONFIG, data);
 	}
